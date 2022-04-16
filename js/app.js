@@ -73,10 +73,10 @@ SalmonCookies.prototype.render = function () {
   cityTotal.textContent = this.totalCookiesSoldPerCity;
 };
 
-
-// table footer
 const footer = document.createElement('tfoot');
 tableElem.appendChild(footer);
+
+// table footer
 
 function createFooterRow() {
   const footerRow = document.createElement('tr');
@@ -105,14 +105,6 @@ const allCookieStands = [
   new SalmonCookies('Paris', 20, 38, 2.3),
   new SalmonCookies('Lima', 2, 16, 4.6),
 ];
-function getSalesPerShopPerHour(hourlyIndex) {
-  //sum all shop sales for hourlyIndex
-  let sum = 0;
-  for (let i = 0; i < allCookieStands.length; i++){
-    sum += allCookieStands[i].randomCookiesPerHour[hourlyIndex];
-  }
-  return sum;
-}
 
 for (let i = 0; i < allCookieStands.length; i++) {
   allCookieStands[i].generateRandomCookiesPerHour();
@@ -122,6 +114,14 @@ for (let i = 0; i < allCookieStands.length; i++) {
 // footer.innerHTML ='';
 createFooterRow();
 getSalesPerShopPerHour();
+function getSalesPerShopPerHour(hourlyIndex) {
+  //sum all shop sales for hourlyIndex
+  let sum = 0;
+  for (let i = 0; i < allCookieStands.length; i++){
+    sum += allCookieStands[i].randomCookiesPerHour[hourlyIndex];
+  }
+  return sum;
+}
 
 //random within range function
 function randomInRange(min, max) {
@@ -138,6 +138,7 @@ formElem.addEventListener('submit', function (event) {
   const maxCustomers = parseInt(event.target.maxCustomers.value);
   const avgCookiePerCustomer = parseFloat(event.target.avgCookiePerCustomer.value);
   let newStandData = new SalmonCookies(city, minCustomers, maxCustomers, avgCookiePerCustomer);
+
   allCookieStands.push(newStandData);
 
   newStandData.generateRandomCookiesPerHour();
