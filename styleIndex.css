@@ -1,11 +1,27 @@
+header {
+  background-color: #b7b7a4;
+  border-radius: 20px;
+
+}
+a {
+  background-color: #6b705c;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 800;
+  font-family:'Berkshire Swash', cursive;
+  margin: 25px;
+  text-align: center;
+}
+
 body{
   background-color: #ffe8d6;
   text-align: center;
 }
 
 h1 {
-  background-color: #b7b7a4;
-  font-family: 'Rubik Bubbles', cursive;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 50px;
   text-align: center;
   height: 100px;
   border-radius: 15px;
@@ -21,16 +37,6 @@ table {
   display: inline-block;
 }
 
-a {
-  background-color: #6b705c;
-  padding: 15px 30px 15px 30px;
-  border-radius: 10px;
-  color: white;
-  font-weight: 800;
-  font-family:Arial, Helvetica, sans-serif;
-  margin: 25px;
-  text-align: center;
-}
 
 div {
   display: inline-block;
